@@ -1,8 +1,8 @@
 # Ex.No-3b-DATA PREPROCESSING
-## Aim
+# Aim
 To perform data preprocessing on a dataset using Python and Scikit-learn by handling missing values, encoding categorical data, splitting the dataset, and applying feature scaling. 
 
-## Introduction
+# Introduction
 Data Preprocessing is an essential step in data analytics and machine learning. Raw datasets may contain missing values, categorical variables, and features with different numerical scales. Preprocessing transforms the raw dataset into a clean and suitable format for machine learning algorithms.
 
 The major preprocessing operations performed in this experiment are:
@@ -14,7 +14,7 @@ Encoding the dependent variable
 Splitting the dataset
 Feature scaling
 
-## Procedure
+# Procedure
 1.	Import the required Python libraries. 
 2.	Mount Google Drive and load the dataset using Pandas. 
 3.	Display the first few records of the dataset. 
@@ -29,7 +29,7 @@ Feature scaling
 12.	Apply StandardScaler for feature scaling. 
 13.	Display the preprocessed training and testing datasets.
     
-## Program
+# Program
 # Step 1: Import libraries and load dataset
 from google.colab import drive
 drive.mount('/content/drive')
@@ -140,7 +140,7 @@ Preprocessed Dataset
      ↓
 Machine Learning
 
-## Conclusion
+# Conclusion
 Thus, the given dataset was successfully preprocessed by handling missing values, encoding categorical variables, splitting the data into training and testing sets, and performing feature scaling.
 
 
