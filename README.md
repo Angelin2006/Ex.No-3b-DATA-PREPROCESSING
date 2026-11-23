@@ -34,9 +34,12 @@ Feature scaling
 
 from google.colab import drive
 drive.mount('/content/drive')
+
 import pandas as pd
 import numpy as np
+
 df = pd.read_csv('/content/drive/MyDrive/Datasets/Data.csv')
+
 # Display dataset
 df.head()
 
@@ -49,42 +52,66 @@ print(df.shape)
 
 x = df[['Country', 'Age', 'Salary']]
 y = df[['Purchased']].values
+
 # Convert X into array
+
 x = df[['Country', 'Age', 'Salary']].values
 
 # Step 4: Handle missing values
 
 from sklearn.impute import SimpleImputer
+
 imputer = SimpleImputer(
     missing_values=np.nan,
-    strategy='mean')
+    strategy='mean'
+)
+
 imputer.fit(x[:, 1:3])
 x[:, 1:3] = imputer.transform(x[:, 1:3])
+
 print(x)
 
 # Step 5: Encode categorical data
 
 from sklearn.preprocessing import LabelEncoder
+
 label_encoder_x = LabelEncoder()
+
 x[:, 0] = label_encoder_x.fit_transform(x[:, 0])
+
 print(x)
 
 # Step 6: One-Hot Encoding
 
 from sklearn.preprocessing import OneHotEncoder
+
 onehotencoder = OneHotEncoder()
-x_country = onehotencoder.fit_transform( df.Country.values.reshape(-1, 1)
+
+x_country = onehotencoder.fit_transform(
+    df.Country.values.reshape(-1, 1)
 ).toarray()
+
 print(x_country)
+
 # Encode dependent variable
+
 labelencoder_y = LabelEncoder()
+
 y = labelencoder_y.fit_transform(y)
+
 print(y)
 
 # Step 7: Split dataset into training and testing sets
 
 from sklearn.model_selection import train_test_split
-x_train, x_test, y_train, y_test = train_test_split(  x, y, test_size=0.2, random_state=0)
+
+x_train, x_test, y_train, y_test = train_test_split(
+    x,
+    y,
+    test_size=0.2,
+    random_state=0
+)
+
 print(x_train)
 print(x_test)
 print(y_train)
@@ -92,9 +119,12 @@ print(y_train)
 # Step 8: Feature Scaling
 
 from sklearn.preprocessing import StandardScaler
+
 sc_x = StandardScaler()
+
 x_train = sc_x.fit_transform(x_train)
 x_test = sc_x.transform(x_test)
+
 print(x_train)
 print(x_test)
 
@@ -153,6 +183,17 @@ Feature Scaling
 Preprocessed Dataset
      ↓
 Machine Learning
+
+# Output
+
+<img width="357" height="246" alt="image" src="https://github.com/user-attachments/assets/9e3ec6a2-c26f-40e7-b60b-494ad8c56f6c" />
+<img width="422" height="327" alt="image" src="https://github.com/user-attachments/assets/f3730fc6-b890-4404-8f16-046ea0cc79e3" />
+<img width="280" height="522" alt="image" src="https://github.com/user-attachments/assets/c8ae9006-02bb-4208-89c7-eb896518065b" />
+<img width="412" height="251" alt="image" src="https://github.com/user-attachments/assets/c5aac6ba-0fc4-4241-b452-0504e39b2fa6" />
+<img width="281" height="311" alt="image" src="https://github.com/user-attachments/assets/669e611f-848a-4a4c-b68c-108af8a9d1f6" />
+<img width="440" height="291" alt="image" src="https://github.com/user-attachments/assets/67d05e07-e2d0-47ca-bca6-20d3283dc4a7" />
+
+
 
 # Conclusion
 Thus, the given dataset was successfully preprocessed by handling missing values, encoding categorical variables, splitting the data into training and testing sets, and performing feature scaling.
