@@ -187,11 +187,20 @@ Machine Learning
 # Output
 
 <img width="357" height="246" alt="image" src="https://github.com/user-attachments/assets/9e3ec6a2-c26f-40e7-b60b-494ad8c56f6c" />
+
 <img width="422" height="327" alt="image" src="https://github.com/user-attachments/assets/f3730fc6-b890-4404-8f16-046ea0cc79e3" />
+
 <img width="280" height="522" alt="image" src="https://github.com/user-attachments/assets/c8ae9006-02bb-4208-89c7-eb896518065b" />
+
 <img width="412" height="251" alt="image" src="https://github.com/user-attachments/assets/c5aac6ba-0fc4-4241-b452-0504e39b2fa6" />
+
 <img width="281" height="311" alt="image" src="https://github.com/user-attachments/assets/669e611f-848a-4a4c-b68c-108af8a9d1f6" />
+
 <img width="440" height="291" alt="image" src="https://github.com/user-attachments/assets/67d05e07-e2d0-47ca-bca6-20d3283dc4a7" />
+
+# Result
+
+Thus, the given dataset was successfully preprocessed by handling missing values, encoding categorical variables, splitting the data into training and testing sets, and performing feature scaling.
 
 
 
