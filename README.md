@@ -198,12 +198,6 @@ Machine Learning
 
 <img width="440" height="291" alt="image" src="https://github.com/user-attachments/assets/67d05e07-e2d0-47ca-bca6-20d3283dc4a7" />
 
-# Result
-
-Thus, the given dataset was successfully preprocessed by handling missing values, encoding categorical variables, splitting the data into training and testing sets, and performing feature scaling.
-
-
-
 # Conclusion
 Thus, the given dataset was successfully preprocessed by handling missing values, encoding categorical variables, splitting the data into training and testing sets, and performing feature scaling.
 
